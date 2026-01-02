@@ -2,6 +2,8 @@ var gamescripts = (function () {
 
     var item = null;
     var wid = 6;
+    var timerInterval = null;
+    var timeLeft = 60;
 
     return {
         init: function () {
@@ -208,6 +210,41 @@ var gamescripts = (function () {
 
         slave_wedge_helper: function (event) {
             $('#' + item.id).remove();
+        },
+
+        startTimer: function () {
+            if (timerInterval !== null) {
+                return; // Timer già in esecuzione
+            }
+
+            $('#timer-start-btn').prop('disabled', true);
+
+            timerInterval = setInterval(function () {
+                timeLeft--;
+                $('#timer-display').text(timeLeft);
+
+                if (timeLeft <= 10) {
+                    $('#timer-display').css('color', '#FF4848');
+                }
+
+                if (timeLeft <= 0) {
+                    gamescripts.stopTimer();
+                }
+            }, 1000);
+        },
+
+        stopTimer: function () {
+            if (timerInterval !== null) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+                $('#timer-start-btn').prop('disabled', false);
+            }
+        },
+
+        resetTimer: function () {
+            gamescripts.stopTimer();
+            timeLeft = 60;
+            $('#timer-display').text(timeLeft).css('color', '#000000');
         }
     }
 

@@ -109,14 +109,25 @@
 
                 <table id="dice-table">
                     <tr>
-                        <td>
-                            <script type="text/javascript">
-                                D6.setBaseUrl('dice-roller/');
-                                D6.dice(1);
-                                D6.setButtonLabel('Tira il dado!');
-                                $('.die').css('width', '70px');
-                                D6.roll();
-                            </script>
+                        <td class="dice-section">
+                            <div class="dice-column">
+                                <script type="text/javascript">
+                                    D6.setBaseUrl('dice-roller/');
+                                    D6.dice(1);
+                                    D6.setButtonLabel('Tira il dado!');
+                                    $('.die').css('width', '70px');
+                                    D6.roll();
+                                </script>
+                            </div>
+                        </td>
+                        <td class="timer-section">
+                            <div id="timer-container">
+                                <div id="timer-display">60</div>
+                                <div class="timer-buttons">
+                                    <button id="timer-start-btn" onclick="gamescripts.startTimer()">Avvia Timer</button>
+                                    <button id="timer-reset-btn" onclick="gamescripts.resetTimer()">Reset</button>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 </table>
