@@ -2,30 +2,35 @@
     display: inline;
     font-size: 30px;
     text-align: center;
-    -webkit-text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    -moz-text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     cursor: move;
     margin: 0;
 }
 
 .wedge0 {
-    color: blue;
+    color: #FBDC44;
 }
+
 .wedge1 {
-    color: green;
+    color: #F49738;
 }
+
 .wedge2 {
-    color: rgb(246, 99, 51);
+    color: #D7196F;
 }
+
 .wedge3 {
-    color: rgb(255, 117, 190);
+    color: #884594;
 }
+
 .wedge4 {
-    color: purple;
+    color: #2B9FD2;
 }
+
 .wedge5 {
-    color: yellow;
+    color: #6AAD4E;
 }
 
 /*.wedge {
